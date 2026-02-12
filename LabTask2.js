@@ -51,3 +51,20 @@ console.log(
         min: [5, 3, 4, 3]
     })
 );
+
+
+
+
+add = (a, b) => a + b;
+
+subtract = (a, b) => a - b;
+
+multiply = (a, b) => a * b;
+
+
+console.log(add(5, 3));
+console.log(subtract(5, 3));
+console.log(multiply(5, 3));
+
+
+
