@@ -15,8 +15,18 @@ function App() {
     setTodos([...todos, task]);
   };
 
-  console.log(todos);
+  const deleteTodo = (index: number) => {
+    const update = todos.filter((_, idx) => idx !== index);
+    setTodos(update);
+  };
 
+ const edittodo=(index: number, newTask: string)=>{
+     const updated=[...todos];
+      updated[index]=newTask;
+      setTodos(updated);
+ }
+
+ 
   return (
     <View style={styles.container}>
       <ScrollView
@@ -24,7 +34,7 @@ function App() {
       // contentContainerStyle={{ gap: 20, padding: 20 }}
       >
         <TodoInput addTodo={addtodo} />
-        <Todolist todos={todos} />
+        <Todolist todos={todos} deleteTodo={deleteTodo} editTodo={edittodo} />
         {/* <Basics />
         <Inputcompnent />
         <ScrollVieww />
